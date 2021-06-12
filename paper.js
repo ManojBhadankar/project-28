@@ -5,8 +5,8 @@ class paper
 		var options={
 			isStatic:false,
 			restitution:0.3,
-			friction:1,
-			density:2
+			friction:10,
+			density:3
 
 			
 			}

@@ -9,16 +9,17 @@ var world;
 
 
 function setup() {
-	createCanvas(1600, 700);
+	createCanvas(1400,700);
 	rectMode(CENTER);
 
 
 	engine = Engine.create();
 	world = engine.world;
 	
-	paperObject=new paper(200,350,70);
+	paperObject=new paper(150,350,60);
 	groundObject=new ground(width/2,670,width,20);
-	dustbinObject=new dustbin(1200,650);
+	dustbinObject=new dustbin(1150,650);
+	dustbinObject.scale=0.7;
 	chain = new launcher(paperObject.body,{x:180,y:250});
 	//Create a Ground
 	
@@ -41,12 +42,13 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(230);
+  background("sky blue");
  
   
   paperObject.display();
   groundObject.display();
   dustbinObject.display();
+  
   
 
 }
